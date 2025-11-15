@@ -4,6 +4,8 @@ import express from 'express'
 const studentRoutes = express.Router();
 
 studentRoutes.get('/all', Studentcontroller.fetchStudents);
-// bookRoutes.post('/new', Bookcontroller.createBooks);
+studentRoutes.post('/new', Studentcontroller.createStudent);
+studentRoutes.put('/edit/:studentId', Studentcontroller.editStudent);
+studentRoutes.delete('/delete/:studentId', Studentcontroller.deleteStudent);
 
 export default studentRoutes;
